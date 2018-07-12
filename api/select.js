@@ -8,8 +8,7 @@ const connection = require('../database/mysql');//导入mysq配置文件
 // connection.connect();
 
 app.get('/', function(req, res) {
-    var res = res;
-    var req = req;
+    console.log('select')
     //执行SQL语句,这里是一条简单的MySQL查询语句
     var sql = "select * from student";
     connection.query(sql, function(err, rows, fields) {

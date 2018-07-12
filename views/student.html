@@ -4,43 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/stylesheets/style.css">
     <title>学生信息</title>
-    <style>
-        * {
-            margin: 0; padding: 0;
-            box-sizing: border-box;
-        }
-        label {
-            display: block;
-        }
-        table{
-            border-collapse: collapse;
-            margin: 0 auto;
-            text-align: center;
-        }
-        table td, table th{
-            border: 1px solid #cad9ea;
-            color: #666;
-            height: 30px;
-        }
-        table thead th{
-            background-color: #CCE8EB;
-            width: 100px;
-        }
-        table tr:nth-child(odd) {
-            background: #fff;
-        }
-        table tr:nth-child(even) {
-            background: #F5FAFA;
-        }
-        h1 {
-            text-align: center;
-        }
-        div.add a {
-            position: relative;
-            left: 50%;
-        }
-    </style>
 </head>
 <body>
     <h1>查看学生信息</h1>
@@ -65,9 +30,12 @@
             </tr>
             <% })%>
         </table>
-        <div class="add">
-            <a href="/student/addOne">增加学生</a>
-        </div>
+        <form action="" method="get">
+            <div class="add">
+                <a href="/student/addOne">增加学生</a>
+                <a href="/">返回主页</a>
+            </div>
+        </form>
         
     </div>
     

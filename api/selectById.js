@@ -8,6 +8,7 @@ const connection = require('../database/mysql');//导入mysq配置文件
 // connection.connect();
 
 app.get('/', function(req, res) {
+    console.log('selectById')
     console.log(req.params.sid)
     // var sid = req.params.sid;
     //执行SQL语句,这里是一条简单的MySQL查询语句
@@ -19,7 +20,7 @@ app.get('/', function(req, res) {
         }
         console.log(rows)
         // res.send(rows)  //这里在页面上输出数据
-        res.render('student', {rows: rows})
+        res.render('student-edit', {rows: rows})
     });
     
 })

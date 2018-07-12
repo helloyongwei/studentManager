@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/stylesheets/style.css">
     <title><%= title%></title>
+    <style>
+        h1 {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <h1>这是首页</h1>
-    <a href="/users">/users</a>
-    <a href="">查看选课信息</a>
-    <a href="/student/select">查看学生信息</a>
+    <form action="" method="get">
+        <a href="/course">查看选课信息</a>
+        <a href="/student/select">查看学生信息</a>
+    </form>
 </body>
 </html>
