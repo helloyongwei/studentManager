@@ -61,6 +61,21 @@ router.post('/addOne/submit', function(req, res) {
 })
 
 
+router.post('/search', function(req, res) {
+    var param = req.body.search
+    var sql = `
+    select * from student where name = '${param}'
+    `
+    connection.query(sql, function(err, rows, fields) {
+        if (err) {
+            console.log('[query] - :' + err);
+            return;
+        }
+        console.log(rows)
+        res.render('student', {rows: rows})
+    })
+})
+
 
 
 
